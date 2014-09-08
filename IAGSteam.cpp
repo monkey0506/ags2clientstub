@@ -35,26 +35,24 @@ namespace AGSteam
 namespace Stub
 {
 
-IAGSteam *AGSteam;
-
 int AGSteam_IsSteamInitialized()
 {
-    return (AGSteam->IsInitialized() != 0);
+    return (GetAGSteam()->IsInitialized() != 0);
 }
 
 void AGSteam_ResetStatsAndAchievements()
 {
-    AGSteam->ResetStatsAndAchievements();
+    GetAGSteam()->ResetStatsAndAchievements();
 }
 
 char const* AGSteam_GetCurrentGameLanguage()
 {
-    return AGSteam->GetCurrentGameLanguage();
+    return GetAGSteam()->GetCurrentGameLanguage();
 }
 
 char const* AGSteam_GetUserName()
 {
-    return AGSteam->GetUserName();
+    return GetAGSteam()->GetUserName();
 }
 
 IAGSteam::~IAGSteam()

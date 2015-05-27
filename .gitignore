@@ -1,0 +1,9 @@
+Solutions/obj
+Solutions/Debug
+Solutions/Release
+*.depend
+*.layout
+*.ncb
+*.suo
+*.vcproj.user
+*.vcproj.*.user

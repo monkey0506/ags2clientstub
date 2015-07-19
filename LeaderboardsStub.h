@@ -33,3 +33,59 @@
 // the WTFPL, or any compatible license which is not less restrictive.
 // See http://www.wtfpl.net/ for more details.
 //
+#ifndef AGSTEAM_LEADERBOARDSSTUB_H
+#define AGSTEAM_LEADERBOARDSSTUB_H
+
+#include "ags2client/IClientLeaderboards.h"
+
+namespace AGSteam
+{
+    namespace Stub
+    {
+        class LeaderboardsStub : public AGS2Client::IClientLeaderboards
+        {
+        public:
+            void FindLeaderboard(char const*) const override
+            {
+            }
+
+            bool UploadScore(int) const override
+            {
+                return false;
+            }
+
+            bool DownloadScores(int) const override
+            {
+                return false;
+            }
+
+            char const* GetCurrentLeaderboardName() const override
+            {
+                return nullptr;
+            }
+
+            char const* GetLeaderName(int) const override
+            {
+                return nullptr;
+            }
+
+            int GetLeaderScore(int) const override
+            {
+                return 0;
+            }
+
+            int GetLeaderCount() const override
+            {
+                return 0;
+            }
+
+            ~LeaderboardsStub()
+            {
+            }
+        };
+
+        LeaderboardsStub& GetLeaderboardsStub();
+    } // namespace Stub
+} // namespace AGSteam
+
+#endif // AGSTEAM_LEADERBOARDSSTUB_H

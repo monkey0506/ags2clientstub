@@ -1,5 +1,7 @@
 // AGSteamStub
 // Plugin stub for the Steam plugin for AGS
+// Copyright © 2014-2015 MonkeyMoto Productions, Inc.
+// LICENSE FILE
 //
 // This stub is a non-functional replacement for the AGSteam plugin. The
 // full plugin cannot be made open-source due to restrictions enforced
@@ -9,7 +11,6 @@
 // information you may contact monkey_05_06 on the AGS forums at:
 // <http://www.adventuregamestudio.co.uk/forums/index.php?action=profile&u=2015>
 //
-// Copyright © 2014 MonkeyMoto Productions, Inc.
 // This work is free. You can redistribute it and/or modify it under the
 // terms of the Do What The Fuck You Want To Public License, Version 2,
 // as published by Sam Hocevar. See the LICENSE file for more details.
@@ -28,42 +29,29 @@
 //
 //  0. You just DO WHAT THE FUCK YOU WANT TO.
 //
-#ifndef AGSTEAM_STEAMACHIEVEMENTSTUB_H
-#define AGSTEAM_STEAMACHIEVEMENTSTUB_H
-
-#include "ISteamAchievement.h"
+// The AGSteamStub plugin may be licensed under future versions of
+// the WTFPL, or any compatible license which is not less restrictive.
+// See http://www.wtfpl.net/ for more details.
+//
+#include "StatsStub.h"
 
 namespace AGSteam
 {
-namespace Stub
-{
-
-class SteamAchievementStub : public ISteamAchievement
-{
-public:
-    bool ClearAchievement(char const*)
+    namespace Stub
     {
-        return true;
-    }
+        StatsStub statsStub;
 
-    bool IsAchievementAchieved(char const*)
-    {
-        return false;
-    }
-
-    bool SetAchievementAchieved(char const*)
-    {
-        return false;
-    }
-
-    ~SteamAchievementStub()
-    {
-    }
-};
-
-SteamAchievementStub& GetSteamAchievementStub();
-
-} // namespace Stub
+        StatsStub& GetStatsStub()
+        {
+            return statsStub;
+        }
+    } // namespace Stub
 } // namespace AGSteam
 
-#endif // AGSTEAM_STEAMACHIEVEMENTSTUB_H
+namespace AGS2Client
+{
+    IClientStats* GetClientStats()
+    {
+        return &AGSteam::Stub::GetStatsStub();
+    }
+}

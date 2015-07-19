@@ -1,9 +1,11 @@
 Solutions/obj
+Solutions/Backup
 Solutions/Debug
 Solutions/Release
 *.depend
 *.layout
 *.ncb
+*.sdf
 *.suo
 *.vcproj.user
 *.vcproj.*.user

@@ -33,3 +33,65 @@
 // the WTFPL, or any compatible license which is not less restrictive.
 // See http://www.wtfpl.net/ for more details.
 //
+#ifndef AGSTEAM_STATSSTUB_H
+#define AGSTEAM_STATSSTUB_H
+
+#include "ags2client/IClientStats.h"
+
+namespace AGSteam
+{
+    namespace Stub
+    {
+        class StatsStub : public AGS2Client::IClientStats
+        {
+        public:
+            int GetIntStat(char const *) const override
+            {
+                return 0;
+            }
+
+            float GetFloatStat(char const*) const override
+            {
+                return 0.0f;
+            }
+
+            float GetAverageRateStat(char const*) const override
+            {
+                return 0.0f;
+            }
+
+            bool SetIntStat(char const*, int) const override
+            {
+                return false;
+            }
+
+            bool SetFloatStat(char const*, float) const override
+            {
+                return false;
+            }
+
+            bool UpdateAverageRateStat(char const*, float, float) const override
+            {
+                return false;
+            }
+
+            int GetGlobalIntStat(char const*) const override
+            {
+                return 0;
+            }
+
+            float GetGlobalFloatStat(char const*) const override
+            {
+                return 0.0f;
+            }
+
+            ~StatsStub()
+            {
+            }
+        };
+
+        StatsStub& GetStatsStub();
+    } // namespace Stub
+} // namespace AGSteam
+
+#endif // AGSTEAM_STATSSTUB_H

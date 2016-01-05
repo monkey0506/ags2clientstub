@@ -33,24 +33,47 @@
 // See http://www.wtfpl.net/ for more details.
 //
 #include "LeaderboardsStub.h"
+using namespace AGSteam::Stub;
 
-namespace AGSteam
+LeaderboardsStub& LeaderboardsStub::GetLeaderboardsStub() noexcept
 {
-    namespace Stub
-    {
-        LeaderboardsStub leaderboardsStub;
+	static LeaderboardsStub stub;
+	return stub;
+}
 
-        LeaderboardsStub& GetLeaderboardsStub()
-        {
-            return leaderboardsStub;
-        }
-    } // namespace Stub
-} // namespace AGSteam
+void LeaderboardsStub::RequestLeaderboard(char const*, AGS2Client::LeaderboardScoreType, int) const noexcept
+{
+}
+
+bool LeaderboardsStub::UploadScore(int) const noexcept
+{
+	return false;
+}
+
+char const* LeaderboardsStub::GetCurrentLeaderboardName() const noexcept
+{
+	return nullptr;
+}
+
+char const* LeaderboardsStub::GetLeaderName(int) const noexcept
+{
+	return nullptr;
+}
+
+int LeaderboardsStub::GetLeaderScore(int) const noexcept
+{
+	return 0;
+}
+
+int LeaderboardsStub::GetLeaderCount() const noexcept
+{
+	return 0;
+}
 
 namespace AGS2Client
 {
-    IClientLeaderboards* GetClientLeaderboards()
+    IClientLeaderboards* GetClientLeaderboards() noexcept
     {
-        return &AGSteam::Stub::GetLeaderboardsStub();
+		return &LeaderboardsStub::GetLeaderboardsStub();
     }
 }

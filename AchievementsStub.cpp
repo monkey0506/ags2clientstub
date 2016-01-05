@@ -33,24 +33,33 @@
 // See http://www.wtfpl.net/ for more details.
 //
 #include "AchievementsStub.h"
+using namespace AGSteam::Stub;
 
-namespace AGSteam
+AchievementsStub& AchievementsStub::GetAchievementsStub() noexcept
 {
-    namespace Stub
-    {
-        AchievementsStub achievementsStub;
+	static AchievementsStub stub{};
+	return stub;
+}
 
-        AchievementsStub& GetAchievementsStub()
-        {
-            return achievementsStub;
-        }
-    } // namespace Stub
-} // namespace AGSteam
+bool AchievementsStub::ResetAchievement(char const*) const noexcept
+{
+	return true;
+}
+
+bool AchievementsStub::IsAchievementAchieved(char const*) const noexcept
+{
+	return false;
+}
+
+bool AchievementsStub::SetAchievementAchieved(char const*) const noexcept
+{
+	return false;
+}
 
 namespace AGS2Client
 {
-    IClientAchievements* GetClientAchievements()
+    IClientAchievements* GetClientAchievements() noexcept
     {
-        return &AGSteam::Stub::GetAchievementsStub();
+		return &AchievementsStub::GetAchievementsStub();
     }
 }

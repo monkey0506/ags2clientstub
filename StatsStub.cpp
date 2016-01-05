@@ -33,24 +33,48 @@
 // See http://www.wtfpl.net/ for more details.
 //
 #include "StatsStub.h"
+using namespace AGSteam::Stub;
 
-namespace AGSteam
+StatsStub& StatsStub::GetStatsStub() noexcept
 {
-    namespace Stub
-    {
-        StatsStub statsStub;
+	static StatsStub stub{};
+	return stub;
+}
 
-        StatsStub& GetStatsStub()
-        {
-            return statsStub;
-        }
-    } // namespace Stub
-} // namespace AGSteam
+int StatsStub::GetIntStat(char const *) const noexcept
+{
+	return 0;
+}
+
+float StatsStub::GetFloatStat(char const*) const noexcept
+{
+	return 0.0f;
+}
+
+float StatsStub::GetAverageRateStat(char const*) const noexcept
+{
+	return 0.0f;
+}
+
+bool StatsStub::SetIntStat(char const*, int) const noexcept
+{
+	return false;
+}
+
+bool StatsStub::SetFloatStat(char const*, float) const noexcept
+{
+	return false;
+}
+
+bool StatsStub::UpdateAverageRateStat(char const*, float, float) const noexcept
+{
+	return false;
+}
 
 namespace AGS2Client
 {
-    IClientStats* GetClientStats()
+    IClientStats* GetClientStats() noexcept
     {
-        return &AGSteam::Stub::GetStatsStub();
+		return &StatsStub::GetStatsStub();
     }
 }

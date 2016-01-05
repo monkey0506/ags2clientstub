@@ -43,43 +43,19 @@ namespace AGSteam
     {
         class StatsStub : public AGS2Client::IClientStats
         {
+		private:
+			StatsStub() noexcept = default;
+
         public:
-            int GetIntStat(char const *) const override
-            {
-                return 0;
-            }
-
-            float GetFloatStat(char const*) const override
-            {
-                return 0.0f;
-            }
-
-            float GetAverageRateStat(char const*) const override
-            {
-                return 0.0f;
-            }
-
-            bool SetIntStat(char const*, int) const override
-            {
-                return false;
-            }
-
-            bool SetFloatStat(char const*, float) const override
-            {
-                return false;
-            }
-
-            bool UpdateAverageRateStat(char const*, float, float) const override
-            {
-                return false;
-            }
-
-            ~StatsStub()
-            {
-            }
+			static StatsStub& GetStatsStub() noexcept;
+			~StatsStub() noexcept = default;
+			int GetIntStat(char const *) const noexcept override;
+			float GetFloatStat(char const*) const noexcept override;
+			float GetAverageRateStat(char const*) const noexcept override;
+			bool SetIntStat(char const*, int) const noexcept override;
+			bool SetFloatStat(char const*, float) const noexcept override;
+			bool UpdateAverageRateStat(char const*, float, float) const noexcept override;
         };
-
-        StatsStub& GetStatsStub();
     } // namespace Stub
 } // namespace AGSteam
 

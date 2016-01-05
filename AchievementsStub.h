@@ -43,28 +43,16 @@ namespace AGSteam
     {
         class AchievementsStub : public AGS2Client::IClientAchievements
         {
+		private:
+			AchievementsStub() noexcept = default;
+
         public:
-            bool ResetAchievement(char const*) const override
-            {
-                return true;
-            }
-
-            bool IsAchievementAchieved(char const*) const override
-            {
-                return false;
-            }
-
-            bool SetAchievementAchieved(char const*) const override
-            {
-                return false;
-            }
-
-            ~AchievementsStub()
-            {
-            }
+			static AchievementsStub& GetAchievementsStub() noexcept;
+			~AchievementsStub() noexcept = default;
+			bool ResetAchievement(char const*) const noexcept override;
+			bool IsAchievementAchieved(char const*) const noexcept override;
+			bool SetAchievementAchieved(char const*) const noexcept override;
         };
-
-        AchievementsStub& GetAchievementsStub();
     } // namespace Stub
 } // namespace AGSteam
 

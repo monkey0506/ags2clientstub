@@ -43,42 +43,19 @@ namespace AGSteam
     {
         class LeaderboardsStub : public AGS2Client::IClientLeaderboards
         {
+		private:
+			LeaderboardsStub() noexcept = default;
+
         public:
-            void RequestLeaderboard(char const*, AGS2Client::LeaderboardScoreType, int) const override
-            {
-            }
-
-            bool UploadScore(int) const override
-            {
-                return false;
-            }
-
-            char const* GetCurrentLeaderboardName() const override
-            {
-                return nullptr;
-            }
-
-            char const* GetLeaderName(int) const override
-            {
-                return nullptr;
-            }
-
-            int GetLeaderScore(int) const override
-            {
-                return 0;
-            }
-
-            int GetLeaderCount() const override
-            {
-                return 0;
-            }
-
-            ~LeaderboardsStub()
-            {
-            }
+			static LeaderboardsStub& GetLeaderboardsStub() noexcept;
+			~LeaderboardsStub() noexcept = default;
+			void RequestLeaderboard(char const*, AGS2Client::LeaderboardScoreType, int) const noexcept override;
+			bool UploadScore(int) const noexcept override;
+			char const* GetCurrentLeaderboardName() const noexcept override;
+			char const* GetLeaderName(int) const noexcept override;
+			int GetLeaderScore(int) const noexcept override;
+			int GetLeaderCount() const noexcept override;
         };
-
-        LeaderboardsStub& GetLeaderboardsStub();
     } // namespace Stub
 } // namespace AGSteam
 

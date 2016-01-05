@@ -9,3 +9,4 @@ Solutions/Release
 *.suo
 *.vcproj.user
 *.vcproj.*.user
+*.opensdf

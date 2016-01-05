@@ -1,0 +1,8 @@
+AGSteamStub
+
+v2.1 - 5 January 2016
+
+Provides a non-functional stub of the AGSteam plugin.
+
+Microsoft Visual Studio and Code::Blocks project files are included
+in the Solutions folder.

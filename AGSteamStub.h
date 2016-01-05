@@ -1,7 +1,6 @@
 // AGSteamStub
 // Plugin stub for the Steam plugin for AGS
-// Copyright © 2014-2015 MonkeyMoto Productions, Inc.
-// LICENSE FILE
+// Copyright © 2014-2016 MonkeyMoto Productions, Inc.
 //
 // This stub is a non-functional replacement for the AGSteam plugin. The
 // full plugin cannot be made open-source due to restrictions enforced
@@ -45,7 +44,7 @@ namespace AGSteam
         class AGSteamStub : public AGS2Client::IAGS2Client
         {
         public:
-            void AttemptDefaultInitialization() const override
+            void Startup() const override
             {
             }
 
@@ -56,11 +55,6 @@ namespace AGSteam
 
             void ResetStatsAndAchievements() const override
             {
-            }
-
-            char const* GetCurrentGameLanguage() const override
-            {
-                return nullptr;
             }
 
             char const* GetUserName() const override
@@ -76,11 +70,6 @@ namespace AGSteam
             {
             }
 
-            char const* GetAGSScriptHeader(float version = 2.0f) const override
-            {
-                return IAGS2Client::GetAGSScriptHeader(version);
-            }
-
             char const* GetAGSPluginName() const override
             {
                 return "AGSteamStub";
@@ -88,7 +77,12 @@ namespace AGSteam
 
             char const* GetAGSPluginDesc() const override
             {
-                return "AGSteamStub: Plugin stub for the Steam plugin for AGS (C) 2014-2015 MonkeyMoto Productions, Inc.";
+                return "AGSteamStub: Plugin stub for the Steam plugin for AGS (C) 2014-2016 MonkeyMoto Productions, Inc.";
+            }
+
+            float GetVersion() const override
+            {
+                return 2.1f;
             }
 
             bool ClaimKeyPress(int data, int(*IsKeyPressed)(int)) const override

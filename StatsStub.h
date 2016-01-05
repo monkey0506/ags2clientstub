@@ -1,7 +1,6 @@
 // AGSteamStub
 // Plugin stub for the Steam plugin for AGS
-// Copyright © 2014-2015 MonkeyMoto Productions, Inc.
-// LICENSE FILE
+// Copyright © 2014-2016 MonkeyMoto Productions, Inc.
 //
 // This stub is a non-functional replacement for the AGSteam plugin. The
 // full plugin cannot be made open-source due to restrictions enforced
@@ -73,16 +72,6 @@ namespace AGSteam
             bool UpdateAverageRateStat(char const*, float, float) const override
             {
                 return false;
-            }
-
-            int GetGlobalIntStat(char const*) const override
-            {
-                return 0;
-            }
-
-            float GetGlobalFloatStat(char const*) const override
-            {
-                return 0.0f;
             }
 
             ~StatsStub()

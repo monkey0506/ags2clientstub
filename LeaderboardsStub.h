@@ -1,7 +1,6 @@
 // AGSteamStub
 // Plugin stub for the Steam plugin for AGS
-// Copyright © 2014-2015 MonkeyMoto Productions, Inc.
-// LICENSE FILE
+// Copyright © 2014-2016 MonkeyMoto Productions, Inc.
 //
 // This stub is a non-functional replacement for the AGSteam plugin. The
 // full plugin cannot be made open-source due to restrictions enforced
@@ -45,16 +44,11 @@ namespace AGSteam
         class LeaderboardsStub : public AGS2Client::IClientLeaderboards
         {
         public:
-            void FindLeaderboard(char const*) const override
+            void RequestLeaderboard(char const*, AGS2Client::LeaderboardScoreType, int) const override
             {
             }
 
             bool UploadScore(int) const override
-            {
-                return false;
-            }
-
-            bool DownloadScores(int) const override
             {
                 return false;
             }

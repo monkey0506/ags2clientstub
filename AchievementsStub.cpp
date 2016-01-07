@@ -55,11 +55,3 @@ bool AchievementsStub::SetAchievementAchieved(char const*) const noexcept
 {
 	return false;
 }
-
-namespace AGS2Client
-{
-    IClientAchievements* GetClientAchievements() noexcept
-    {
-		return &AchievementsStub::GetAchievementsStub();
-    }
-}

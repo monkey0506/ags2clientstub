@@ -43,7 +43,7 @@ namespace AGSteam
     {
         class AchievementsStub : public AGS2Client::IClientAchievements
         {
-		private:
+		protected:
 			AchievementsStub() noexcept = default;
 
         public:

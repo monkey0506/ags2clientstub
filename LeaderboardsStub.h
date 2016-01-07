@@ -43,7 +43,7 @@ namespace AGSteam
     {
         class LeaderboardsStub : public AGS2Client::IClientLeaderboards
         {
-		private:
+		protected:
 			LeaderboardsStub() noexcept = default;
 
         public:

@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\AchievementsStub.cpp" />
+    <ClCompile Include="..\AGS2Client.cpp" />
     <ClCompile Include="..\ags2client\IAGS2Client.cpp" />
     <ClCompile Include="..\ags2client\IClientAchievements.cpp" />
     <ClCompile Include="..\ags2client\IClientLeaderboards.cpp" />

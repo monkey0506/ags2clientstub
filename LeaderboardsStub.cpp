@@ -69,11 +69,3 @@ int LeaderboardsStub::GetLeaderCount() const noexcept
 {
 	return 0;
 }
-
-namespace AGS2Client
-{
-    IClientLeaderboards* GetClientLeaderboards() noexcept
-    {
-		return &LeaderboardsStub::GetLeaderboardsStub();
-    }
-}

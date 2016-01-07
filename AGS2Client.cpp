@@ -33,61 +33,30 @@
 // See http://www.wtfpl.net/ for more details.
 //
 #include "AGSteamStub.h"
+#include "AchievementsStub.h"
+#include "LeaderboardsStub.h"
+#include "StatsStub.h"
 using namespace AGSteam::Stub;
 
-AGSteamStub& AGSteamStub::GetAGSteamStub() noexcept
+namespace AGS2Client
 {
-	static AGSteamStub stub{};
-	return stub;
-}
+	IAGS2Client* GetClient() noexcept
+	{
+		return &AGSteamStub::GetAGSteamStub();
+	}
 
-void AGSteamStub::Startup() const noexcept
-{
-}
+	IClientAchievements* GetClientAchievements() noexcept
+	{
+		return &AchievementsStub::GetAchievementsStub();
+	}
 
-bool AGSteamStub::IsInitialized() const noexcept
-{
-    return false;
-}
+	IClientLeaderboards* GetClientLeaderboards() noexcept
+	{
+		return &LeaderboardsStub::GetLeaderboardsStub();
+	}
 
-void AGSteamStub::ResetStatsAndAchievements() const noexcept
-{
-}
-
-char const* AGSteamStub::GetUserName() const noexcept
-{
-    return nullptr;
-}
-
-void AGSteamStub::Shutdown() const noexcept
-{
-}
-
-void AGSteamStub::Update() const noexcept
-{
-}
-
-char const* AGSteamStub::GetAGSPluginName() const noexcept
-{
-    return "AGSteamStub";
-}
-
-char const* AGSteamStub::GetAGSPluginDesc() const noexcept
-{
-    return "AGSteamStub: Plugin stub for the Steam plugin for AGS (C) 2014-2016 MonkeyMoto Productions, Inc.";
-}
-
-float AGSteamStub::GetVersion() const noexcept
-{
-    return 2.1f;
-}
-
-bool AGSteamStub::ClaimKeyPress(int data, int(*IsKeyPressed)(int)) const noexcept
-{
-    bool isShift = ((data == 403) || (data == 404)); // is pressed key shift
-    bool isTab = (data == 9); // is pressed key tab
-    bool isShiftTab = ((data == 0x00001111) || // shift+tab as a single key
-        ((isShift) && (IsKeyPressed(9) != 0)) || // key is shift and tab is held
-        ((isTab) && ((IsKeyPressed(403) != 0) || (IsKeyPressed(404) != 0)))); // key is tab and shift is held
-    return isShiftTab; // Claim (Shift+Tab), ignore other keys
+	IClientStats* GetClientStats() noexcept
+	{
+		return &StatsStub::GetStatsStub();
+	}
 }

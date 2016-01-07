@@ -43,7 +43,7 @@ namespace AGSteam
     {
         class StatsStub : public AGS2Client::IClientStats
         {
-		private:
+		protected:
 			StatsStub() noexcept = default;
 
         public:

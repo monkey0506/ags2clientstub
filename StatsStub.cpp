@@ -70,11 +70,3 @@ bool StatsStub::UpdateAverageRateStat(char const*, float, float) const noexcept
 {
 	return false;
 }
-
-namespace AGS2Client
-{
-    IClientStats* GetClientStats() noexcept
-    {
-		return &StatsStub::GetStatsStub();
-    }
-}

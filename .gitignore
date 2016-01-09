@@ -1,7 +1,7 @@
 Solutions/obj
 Solutions/Backup
 Solutions/Debug
-Solutions/Release
+Solutions/Release*
 *.depend
 *.layout
 *.ncb

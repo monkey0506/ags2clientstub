@@ -35,6 +35,7 @@
 #ifndef AGSTEAM_LEADERBOARDSSTUB_H
 #define AGSTEAM_LEADERBOARDSSTUB_H
 
+#include "ags2client/Cpp11Fix.h"
 #include "ags2client/IClientLeaderboards.h"
 
 namespace AGSteam
@@ -44,12 +45,21 @@ namespace AGSteam
         class LeaderboardsStub : public AGS2Client::IClientLeaderboards
         {
 		protected:
+#if __cplusplus <= 199711L // NOT C++11
+			LeaderboardsStub() noexcept {}
+
+		public:
+			~LeaderboardsStub() noexcept {}
+#else // C++11
 			LeaderboardsStub() noexcept = default;
+
+		public:
+			~LeaderboardsStub() noexcept = default;
+#endif // C++11
 
         public:
 			static LeaderboardsStub& GetLeaderboardsStub() noexcept;
-			~LeaderboardsStub() noexcept = default;
-			void RequestLeaderboard(char const*, AGS2Client::LeaderboardScoreType, int) const noexcept override;
+			void RequestLeaderboard(char const*, AGS2Client::LeaderboardScore::Type, int) const noexcept override;
 			bool UploadScore(int) const noexcept override;
 			char const* GetCurrentLeaderboardName() const noexcept override;
 			char const* GetLeaderName(int) const noexcept override;

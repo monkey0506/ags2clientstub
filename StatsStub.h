@@ -35,6 +35,7 @@
 #ifndef AGSTEAM_STATSSTUB_H
 #define AGSTEAM_STATSSTUB_H
 
+#include "ags2client/Cpp11Fix.h"
 #include "ags2client/IClientStats.h"
 
 namespace AGSteam
@@ -44,11 +45,20 @@ namespace AGSteam
         class StatsStub : public AGS2Client::IClientStats
         {
 		protected:
+#if __cplusplus <= 199711L // NOT C++11
+			StatsStub() noexcept {}
+
+		public:
+			~StatsStub() noexcept {}
+#else // C++11
 			StatsStub() noexcept = default;
+
+		public:
+			~StatsStub() noexcept = default;
+#endif // C++11
 
         public:
 			static StatsStub& GetStatsStub() noexcept;
-			~StatsStub() noexcept = default;
 			int GetIntStat(char const *) const noexcept override;
 			float GetFloatStat(char const*) const noexcept override;
 			float GetAverageRateStat(char const*) const noexcept override;

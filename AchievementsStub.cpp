@@ -37,7 +37,7 @@ using namespace AGSteam::Stub;
 
 AchievementsStub& AchievementsStub::GetAchievementsStub() noexcept
 {
-	static AchievementsStub stub{};
+	static AchievementsStub stub;
 	return stub;
 }
 

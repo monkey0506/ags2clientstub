@@ -41,7 +41,7 @@ LeaderboardsStub& LeaderboardsStub::GetLeaderboardsStub() noexcept
 	return stub;
 }
 
-void LeaderboardsStub::RequestLeaderboard(char const*, AGS2Client::LeaderboardScoreType, int) const noexcept
+void LeaderboardsStub::RequestLeaderboard(char const*, AGS2Client::LeaderboardScore::Type, int) const noexcept
 {
 }
 

@@ -35,6 +35,8 @@
 #ifndef AGSTEAM_AGSTEAMSTUB_H
 #define AGSTEAM_AGSTEAMSTUB_H
 
+#include "ags2client/Cpp11Fix.h"
+
 #include "ags2client/IAGS2Client.h"
 
 namespace AGSteam
@@ -44,11 +46,20 @@ namespace AGSteam
         class AGSteamStub : public AGS2Client::IAGS2Client
         {
 		protected:
+#if __cplusplus <= 199711L // NOT C++11
+			AGSteamStub() noexcept {}
+
+		public:
+			~AGSteamStub() noexcept {}
+#else // C++11
 			AGSteamStub() noexcept = default;
+
+		public:
+			~AGSteamStub() noexcept = default;
+#endif // C++11
 
         public:
 			static AGSteamStub& GetAGSteamStub() noexcept;
-            ~AGSteamStub() noexcept = default;
             bool IsInitialized() const noexcept override;
             void ResetStatsAndAchievements() const noexcept override;
             char const* GetUserName() const noexcept override;

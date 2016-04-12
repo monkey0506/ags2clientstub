@@ -37,7 +37,7 @@ using namespace AGSteam::Stub;
 
 StatsStub& StatsStub::GetStatsStub() noexcept
 {
-	static StatsStub stub{};
+	static StatsStub stub;
 	return stub;
 }
 

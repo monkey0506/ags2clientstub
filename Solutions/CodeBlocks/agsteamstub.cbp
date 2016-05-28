@@ -102,6 +102,7 @@
 		<Unit filename="../StatsStub.cpp" />
 		<Unit filename="../StatsStub.h" />
 		<Unit filename="../ags2client/AGSFloatFix.h" />
+		<Unit filename="../ags2client/Cpp11Fix.h" />
 		<Unit filename="../ags2client/IAGS2Client.cpp" />
 		<Unit filename="../ags2client/IAGS2Client.h" />
 		<Unit filename="../ags2client/IClientAchievements.cpp" />

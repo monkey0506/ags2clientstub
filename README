@@ -1,4 +1,11 @@
-AGSteamStub
+AGS2ClientStub (formerly AGSteamStub)
+
+v3.0 - 18 June 2017
+
+Rebranded the stub to clarify that it works as a replacement for any
+AGS2Client plugin (currently, that means AGSteam and AGSGalaxy).
+
+
 
 v2.1 - 5 January 2016
 

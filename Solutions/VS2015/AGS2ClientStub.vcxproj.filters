@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Header Files">
@@ -42,7 +42,7 @@
     <ClInclude Include="..\..\AchievementsStub.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\AGSteamStub.h">
+    <ClInclude Include="..\..\AGS2ClientStub.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\LeaderboardsStub.h">
@@ -74,7 +74,7 @@
     <ClCompile Include="..\..\AGS2Client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\AGSteamStub.cpp">
+    <ClCompile Include="..\..\AGS2ClientStub.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\LeaderboardsStub.cpp">

@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="agsteamstub"
+	Name="ags2clientstub"
 	ProjectGUID="{AF74F91C-B10A-4DAB-AD8F-228DEF034EAB}"
-	RootNamespace="agsteamstub"
+	RootNamespace="ags2clientstub"
 	TargetFrameworkVersion="196613"
 	>
 	<Platforms>
@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;AGSTEAMSTUB_EXPORTS;AGS2CLIENT_UNIFIED_CLIENT_NAME"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;AGS2CLIENT_UNIFIED_CLIENT_NAME"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -58,7 +58,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\agsteam-stub-d.dll"
+				OutputFile="$(OutDir)\ags2client-stub-d.dll"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
 			/>
@@ -111,7 +111,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;AGSTEAMSTUB_EXPORTS;WINDOWS_VERSION;AGS2CLIENT_UNIFIED_CLIENT_NAME"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;WINDOWS_VERSION;AGS2CLIENT_UNIFIED_CLIENT_NAME"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
 				WarningLevel="3"
@@ -128,7 +128,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\agsteam-stub.dll"
+				OutputFile="$(OutDir)\ags2client-stub.dll"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -181,7 +181,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;AGSTEAMSTUB_EXPORTS"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -199,7 +199,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\agsteam-stub-disjoint-d.dll"
+				OutputFile="$(OutDir)\ags2client-stub-disjoint-d.dll"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
 			/>
@@ -248,7 +248,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;AGSTEAMSTUB_EXPORTS;WINDOWS_VERSION"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;WINDOWS_VERSION"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -261,7 +261,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\agsteam-stub-disjoint.dll"
+				OutputFile="$(OutDir)\ags2client-stub-disjoint.dll"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -303,7 +303,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\AGSteamStub.cpp"
+				RelativePath="..\..\AGS2ClientStub.cpp"
 				>
 			</File>
 			<File
@@ -349,7 +349,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\AGSteamStub.h"
+				RelativePath="..\..\AGS2ClientStub.h"
 				>
 			</File>
 			<File

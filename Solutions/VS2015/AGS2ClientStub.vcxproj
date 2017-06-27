@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug-disjoint|Win32">
@@ -26,7 +26,7 @@
     <ClInclude Include="..\..\ags2client\IClientAchievements.h" />
     <ClInclude Include="..\..\ags2client\IClientLeaderboards.h" />
     <ClInclude Include="..\..\ags2client\IClientStats.h" />
-    <ClInclude Include="..\..\AGSteamStub.h" />
+    <ClInclude Include="..\..\AGS2ClientStub.h" />
     <ClInclude Include="..\..\LeaderboardsStub.h" />
     <ClInclude Include="..\..\StatsStub.h" />
   </ItemGroup>
@@ -38,13 +38,13 @@
     <ClCompile Include="..\..\ags2client\IClientLeaderboards.cpp" />
     <ClCompile Include="..\..\ags2client\IClientStats.cpp" />
     <ClCompile Include="..\..\ags2client\main.cpp" />
-    <ClCompile Include="..\..\AGSteamStub.cpp" />
+    <ClCompile Include="..\..\AGS2ClientStub.cpp" />
     <ClCompile Include="..\..\LeaderboardsStub.cpp" />
     <ClCompile Include="..\..\StatsStub.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0D0B26C8-4010-45E6-8080-9063A3CCA0CF}</ProjectGuid>
-    <RootNamespace>AGSteamStub</RootNamespace>
+    <RootNamespace>AGS2ClientStub</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -88,30 +88,30 @@
     <OutDir>..\build\$(Configuration)\</OutDir>
     <IntDir>..\build\obj\$(Configuration)\VS2015\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>agsteam-stub-d</TargetName>
+    <TargetName>ags2client-stub-d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-disjoint|Win32'">
     <OutDir>..\build\$(Configuration)\</OutDir>
     <IntDir>..\build\obj\$(Configuration)\VS2015\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>agsteam-stub-disjoint-d</TargetName>
+    <TargetName>ags2client-stub-disjoint-d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>..\build\$(Configuration)\</OutDir>
     <IntDir>..\build\obj\$(Configuration)\VS2015\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>agsteam-stub</TargetName>
+    <TargetName>ags2client-stub</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-disjoint|Win32'">
     <OutDir>..\build\$(Configuration)\</OutDir>
     <IntDir>..\build\obj\$(Configuration)\VS2015\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>agsteam-stub-disjoint</TargetName>
+    <TargetName>ags2client-stub-disjoint</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AGSTEAMSTUB_EXPORTS;AGS2CLIENT_UNIFIED_CLIENT_NAME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;AGS2CLIENT_UNIFIED_CLIENT_NAME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -128,7 +128,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-disjoint|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AGSTEAMSTUB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -145,7 +145,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AGSTEAMSTUB_EXPORTS;WINDOWS_VERSION;AGS2CLIENT_UNIFIED_CLIENT_NAME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;WINDOWS_VERSION;AGS2CLIENT_UNIFIED_CLIENT_NAME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
@@ -161,7 +161,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-disjoint|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AGSTEAMSTUB_EXPORTS;WINDOWS_VERSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;WINDOWS_VERSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>

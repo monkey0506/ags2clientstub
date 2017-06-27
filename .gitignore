@@ -12,3 +12,5 @@ Solutions/build/Release-disjoint
 *.vcproj.user
 *.vcproj.*.user
 *.opensdf
+Solutions/VS2017/.vs
+*.vcxproj.user

@@ -1,7 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "agsteamstub", "agsteamstub.vcproj", "{AF74F91C-B10A-4DAB-AD8F-228DEF034EAB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ags2clientstub", "ags2clientstub.vcproj", "{AF74F91C-B10A-4DAB-AD8F-228DEF034EAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

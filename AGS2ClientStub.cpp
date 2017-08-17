@@ -24,6 +24,11 @@ void AGS2ClientStub::ResetStatsAndAchievements() const noexcept
 {
 }
 
+char const* AGS2ClientStub::GetCurrentGameLanguage() const noexcept
+{
+    return nullptr;
+}
+
 char const* AGS2ClientStub::GetUserName() const noexcept
 {
     return nullptr;

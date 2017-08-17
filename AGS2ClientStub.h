@@ -33,6 +33,7 @@ namespace AGS2Client
             bool IsInitialized() const noexcept override;
             void ResetStatsAndAchievements() const noexcept override;
             char const* GetUserName() const noexcept override;
+            char const* GetCurrentGameLanguage() const noexcept override;
 			void Startup() const noexcept override;
             void Shutdown() const noexcept override;
             void Update() const noexcept override;

@@ -15,7 +15,7 @@ namespace AGS2Client
         class LeaderboardsStub : public AGS2Client::IClientLeaderboards
         {
 		protected:
-#if __cplusplus <= 199711L // NOT C++11
+#ifndef AGS2CLIENT_HAS_CPP11
 			LeaderboardsStub() noexcept {}
 
 		public:

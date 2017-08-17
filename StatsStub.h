@@ -15,7 +15,7 @@ namespace AGS2Client
         class StatsStub : public AGS2Client::IClientStats
         {
 		protected:
-#if __cplusplus <= 199711L // NOT C++11
+#ifndef AGS2CLIENT_HAS_CPP11 // NOT C++11
 			StatsStub() noexcept {}
 
 		public:

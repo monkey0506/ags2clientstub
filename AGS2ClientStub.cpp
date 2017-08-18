@@ -5,7 +5,7 @@
 #include "AGS2ClientStub.h"
 using namespace AGS2Client::Stub;
 
-AGS2ClientStub& AGS2ClientStub::GetAGSteamStub() noexcept
+AGS2ClientStub& AGS2ClientStub::GetAGS2ClientStub() noexcept
 {
 	static AGS2ClientStub stub;
 	return stub;

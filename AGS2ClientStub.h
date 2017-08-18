@@ -29,7 +29,7 @@ namespace AGS2Client
 #endif // C++11
 
         public:
-			static AGS2ClientStub& GetAGSteamStub() noexcept;
+			static AGS2ClientStub& GetAGS2ClientStub() noexcept;
             bool IsInitialized() const noexcept override;
             void ResetStatsAndAchievements() const noexcept override;
             char const* GetUserName() const noexcept override;

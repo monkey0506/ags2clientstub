@@ -12,7 +12,7 @@ namespace AGS2Client
 {
 	IAGS2Client* GetClient() noexcept
 	{
-		return &AGS2ClientStub::GetAGSteamStub();
+		return &AGS2ClientStub::GetAGS2ClientStub();
 	}
 
 	IClientAchievements* GetClientAchievements() noexcept

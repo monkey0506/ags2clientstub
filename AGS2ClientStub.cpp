@@ -2,6 +2,9 @@
 // Game-client plugin stub for AGS
 // Copyright © 2014-2017 MonkeyMoto Productions, Inc.
 
+#include <string>
+#include "ags2client/agsplugin.h"
+
 #include "AGS2ClientStub.h"
 using namespace AGS2Client::Stub;
 
@@ -27,6 +30,12 @@ void AGS2ClientStub::ResetStatsAndAchievements() const noexcept
 char const* AGS2ClientStub::GetCurrentGameLanguage() const noexcept
 {
     return nullptr;
+}
+
+char const* AGS2ClientStub::GetExtraFunctionsForScriptHeader() const noexcept
+{
+    return
+        "  import static void Initialize(const string, const string);\r\n";
 }
 
 char const* AGS2ClientStub::GetUserName() const noexcept
@@ -60,4 +69,15 @@ float AGS2ClientStub::GetVersion() const noexcept
 bool AGS2ClientStub::ClaimKeyPress(int data, int (*IsKeyPressed)(int)) const noexcept
 {
 	return false;
+}
+
+int AGS2ClientStub_Initialize(char const*, char const*) // to match AGSGalaxy::Initialize(char const*, char const*)
+{
+}
+
+void AGS2ClientStub::RegisterScriptFunctions(IAGSEngine *engine) const noexcept
+{
+    static std::string initialize = std::string{ this->GetClientNameForScript() } +"::Initialize^2";
+    IAGS2Client::RegisterScriptFunctions(engine);
+    engine->RegisterScriptFunction(initialize.c_str(), reinterpret_cast<void*>(AGS2ClientStub_Initialize));
 }

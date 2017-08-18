@@ -32,6 +32,7 @@ namespace AGS2Client
 			static AGS2ClientStub& GetAGS2ClientStub() noexcept;
             bool IsInitialized() const noexcept override;
             void ResetStatsAndAchievements() const noexcept override;
+            char const* GetExtraFunctionsForScriptHeader() const noexcept override;
             char const* GetUserName() const noexcept override;
             char const* GetCurrentGameLanguage() const noexcept override;
 			void Startup() const noexcept override;
@@ -41,6 +42,7 @@ namespace AGS2Client
             char const* GetAGSPluginDesc() const noexcept override;
             float GetVersion() const noexcept override;
             bool ClaimKeyPress(int data, int (*IsKeyPressed)(int)) const noexcept override;
+            void RegisterScriptFunctions(IAGSEngine *engine) const noexcept override;
         };
     } // namespace Stub
 } // namespace AGS2Client

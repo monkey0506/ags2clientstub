@@ -53,7 +53,11 @@ void AGS2ClientStub::Update() const noexcept
 
 char const* AGS2ClientStub::GetAGSPluginName() const noexcept
 {
-    return "AGS2ClientStub";
+#ifdef AGS2CLIENTSTUB_PLUGIN_NAME
+    return AGS2CLIENTSTUB_PLUGIN_NAME;
+#else
+    return "AGS2Client";
+#endif // AGS2CLIENTSTUB_PLUGIN_NAME
 }
 
 char const* AGS2ClientStub::GetAGSPluginDesc() const noexcept
@@ -73,6 +77,7 @@ bool AGS2ClientStub::ClaimKeyPress(int data, int (*IsKeyPressed)(int)) const noe
 
 int AGS2ClientStub_Initialize(char const*, char const*) // to match AGSGalaxy::Initialize(char const*, char const*)
 {
+    return 0;
 }
 
 void AGS2ClientStub::RegisterScriptFunctions(IAGSEngine *engine) const noexcept

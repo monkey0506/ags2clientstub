@@ -1,9 +1,5 @@
-Solutions/build/obj
+Solutions/build
 Solutions/Backup
-Solutions/build/Debug
-Solutions/build/Debug-disjoint
-Solutions/build/Release
-Solutions/build/Release-disjoint
 *.depend
 *.layout
 *.ncb

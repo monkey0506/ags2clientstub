@@ -5,8 +5,7 @@ Solutions/Backup
 *.ncb
 *.sdf
 *.suo
-*.vcproj.user
-*.vcproj.*.user
+*.vc*proj.user
+*.vc*proj.*.user
 *.opensdf
 Solutions/VS2017/.vs
-*.vcxproj.user

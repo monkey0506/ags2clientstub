@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ags2clientstub", "ags2clientstub.vcproj", "{8D73E2DB-2EDC-4480-A4B6-84DE47079047}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug-disjoint-agsgalaxy|Win32 = Debug-disjoint-agsgalaxy|Win32
+		Debug-disjoint-agsteam|Win32 = Debug-disjoint-agsteam|Win32
+		Release|Win32 = Release|Win32
+		Release-disjoint-agsgalaxy|Win32 = Release-disjoint-agsgalaxy|Win32
+		Release-disjoint-agsteam|Win32 = Release-disjoint-agsteam|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Debug|Win32.Build.0 = Debug|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Debug-disjoint-agsgalaxy|Win32.ActiveCfg = Debug-disjoint-agsgalaxy|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Debug-disjoint-agsgalaxy|Win32.Build.0 = Debug-disjoint-agsgalaxy|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Debug-disjoint-agsteam|Win32.ActiveCfg = Debug-disjoint-agsteam|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Debug-disjoint-agsteam|Win32.Build.0 = Debug-disjoint-agsteam|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Release|Win32.ActiveCfg = Release|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Release|Win32.Build.0 = Release|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Release-disjoint-agsgalaxy|Win32.ActiveCfg = Release-disjoint-agsgalaxy|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Release-disjoint-agsgalaxy|Win32.Build.0 = Release-disjoint-agsgalaxy|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Release-disjoint-agsteam|Win32.ActiveCfg = Release-disjoint-agsteam|Win32
+		{8D73E2DB-2EDC-4480-A4B6-84DE47079047}.Release-disjoint-agsteam|Win32.Build.0 = Release-disjoint-agsteam|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -80,9 +80,13 @@ int AGS2ClientStub_Initialize(char const*, char const*) // to match AGSGalaxy::I
     return 0;
 }
 
+extern void LeaderboardsStub_FindLeaderboard(char const *leaderboardName);
+
 void AGS2ClientStub::RegisterScriptFunctions(IAGSEngine *engine) const noexcept
 {
-	static std::string initialize = std::string(this->GetClientNameForScript()) + "::Initialize^2";
+	static std::string initialize = std::string(this->GetClientNameForScript()) + "::Initialize^2"; // stub for AGSGalaxy
+	static std::string findLeaderboard = std::string(GetClientNameForScript()) + "::FindLeaderboard^1"; // stub for legacy AGSteam build
     IAGS2Client::RegisterScriptFunctions(engine);
     engine->RegisterScriptFunction(initialize.c_str(), reinterpret_cast<void*>(AGS2ClientStub_Initialize));
+    engine->RegisterScriptFunction(findLeaderboard.c_str(), reinterpret_cast<void*>(LeaderboardsStub_FindLeaderboard));
 }

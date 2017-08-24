@@ -15,6 +15,11 @@ void LeaderboardsStub::RequestLeaderboard(char const*, AGS2Client::LeaderboardSc
 {
 }
 
+void LeaderboardsStub_FindLeaderboard(char const *leaderboardName)
+{
+    LeaderboardsStub::GetLeaderboardsStub().RequestLeaderboard(nullptr, AGS2Client::LeaderboardScore::AroundUser, 10);
+}
+
 bool LeaderboardsStub::UploadScore(int) const noexcept
 {
 	return false;

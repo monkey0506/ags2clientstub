@@ -82,7 +82,7 @@ int AGS2ClientStub_Initialize(char const*, char const*) // to match AGSGalaxy::I
 
 void AGS2ClientStub::RegisterScriptFunctions(IAGSEngine *engine) const noexcept
 {
-    static std::string initialize = std::string{ this->GetClientNameForScript() } +"::Initialize^2";
+	static std::string initialize = std::string(this->GetClientNameForScript()) + "::Initialize^2";
     IAGS2Client::RegisterScriptFunctions(engine);
     engine->RegisterScriptFunction(initialize.c_str(), reinterpret_cast<void*>(AGS2ClientStub_Initialize));
 }

@@ -66,14 +66,14 @@
     <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\build\$(Configuration)\</OutDir>
-    <IntDir>..\build\obj\$(Configuration)\VS2017\</IntDir>
+    <OutDir>..\build\Windows\$(Configuration)\</OutDir>
+    <IntDir>..\build\Windows\obj\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>ags2clientstub-d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\build\$(Configuration)\</OutDir>
-    <IntDir>..\build\obj\$(Configuration)\VS2017\</IntDir>
+    <OutDir>..\build\Windows\$(Configuration)\</OutDir>
+    <IntDir>..\build\Windows\obj\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>ags2clientstub</TargetName>
   </PropertyGroup>

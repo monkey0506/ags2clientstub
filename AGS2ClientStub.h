@@ -35,6 +35,7 @@ namespace AGS2Client
 			void Startup() const noexcept override;
             void Shutdown() const noexcept override;
             void Update() const noexcept override;
+            char const* GetAGSScriptHeader() const noexcept override;
             char const* GetAGSPluginName() const noexcept override;
             char const* GetAGSPluginDesc() const noexcept override;
             float GetVersion() const noexcept override;

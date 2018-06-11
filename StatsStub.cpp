@@ -1,14 +1,15 @@
 // AGS2ClientStub
 // Game-client plugin stub for AGS
-// Copyright © 2014-2017 MonkeyMoto Productions, Inc.
+// Copyright © 2014-2018 MonkeyMoto Productions, Inc.
 
 #include "StatsStub.h"
 using namespace AGS2Client::Stub;
 
+StatsStub statsStub;
+
 StatsStub& StatsStub::GetStatsStub() noexcept
 {
-	static StatsStub stub;
-	return stub;
+	return statsStub;
 }
 
 int StatsStub::GetIntStat(char const *) const noexcept

@@ -1,21 +1,22 @@
 // AGS2ClientStub
 // Game-client plugin stub for AGS
-// Copyright © 2014-2017 MonkeyMoto Productions, Inc.
+// Copyright © 2014-2018 MonkeyMoto Productions, Inc.
 
 #include "LeaderboardsStub.h"
 using namespace AGS2Client::Stub;
 
+LeaderboardsStub leaderboardsStub;
+
 LeaderboardsStub& LeaderboardsStub::GetLeaderboardsStub() noexcept
 {
-	static LeaderboardsStub stub;
-	return stub;
+	return leaderboardsStub;
 }
 
 void LeaderboardsStub::RequestLeaderboard(char const*, AGS2Client::LeaderboardScore::Type, int) const noexcept
 {
 }
 
-void LeaderboardsStub_FindLeaderboard(char const *leaderboardName)
+extern "C" void LeaderboardsStub_FindLeaderboard(char const *leaderboardName)
 {
     LeaderboardsStub::GetLeaderboardsStub().RequestLeaderboard(nullptr, AGS2Client::LeaderboardScore::AroundUser, 10);
 }

@@ -27,6 +27,12 @@
     <ClInclude Include="..\..\ags2client\agsplugin.h">
       <Filter>Header Files\ags2client</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\ags2client\Cpp11Fix.h">
+      <Filter>Header Files\ags2client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ags2client\DllExports.h">
+      <Filter>Header Files\ags2client</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\ags2client\IAGS2Client.h">
       <Filter>Header Files\ags2client</Filter>
     </ClInclude>
@@ -42,17 +48,14 @@
     <ClInclude Include="..\..\AchievementsStub.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\AGS2ClientStub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\LeaderboardsStub.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\StatsStub.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\AGS2ClientStub.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ags2client\Cpp11Fix.h">
-      <Filter>Header Files\ags2client</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -77,13 +80,13 @@
     <ClCompile Include="..\..\AGS2Client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\AGS2ClientStub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\LeaderboardsStub.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\StatsStub.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\AGS2ClientStub.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

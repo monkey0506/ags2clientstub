@@ -1,6 +1,6 @@
 // AGS2ClientStub
 // Game-client plugin stub for AGS
-// Copyright © 2014-2017 MonkeyMoto Productions, Inc.
+// Copyright © 2014-2018 MonkeyMoto Productions, Inc.
 
 #include "AGS2ClientStub.h"
 #include "AchievementsStub.h"

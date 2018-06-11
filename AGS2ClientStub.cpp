@@ -1,6 +1,6 @@
 // AGS2ClientStub
 // Game-client plugin stub for AGS
-// Copyright © 2014-2017 MonkeyMoto Productions, Inc.
+// Copyright © 2014-2018 MonkeyMoto Productions, Inc.
 
 #include <string>
 #include "ags2client/agsplugin.h"
@@ -8,10 +8,11 @@
 #include "AGS2ClientStub.h"
 using namespace AGS2Client::Stub;
 
+AGS2ClientStub ags2clientStub;
+
 AGS2ClientStub& AGS2ClientStub::GetAGS2ClientStub() noexcept
 {
-	static AGS2ClientStub stub;
-	return stub;
+	return ags2clientStub;
 }
 
 void AGS2ClientStub::Startup() const noexcept
@@ -84,8 +85,8 @@ extern "C" void LeaderboardsStub_FindLeaderboard(char const *leaderboardName);
 
 void AGS2ClientStub::RegisterScriptFunctions(IAGSEngine *engine) const noexcept
 {
-	static std::string initialize = std::string(this->GetClientNameForScript()) + "::Initialize^2"; // stub for AGSGalaxy
-	static std::string findLeaderboard = std::string(GetClientNameForScript()) + "::FindLeaderboard^1"; // stub for legacy AGSteam build
+	std::string initialize = std::string(this->GetClientNameForScript()) + "::Initialize^2"; // stub for AGSGalaxy
+	std::string findLeaderboard = std::string(GetClientNameForScript()) + "::FindLeaderboard^1"; // stub for legacy AGSteam build
     IAGS2Client::RegisterScriptFunctions(engine);
     engine->RegisterScriptFunction(initialize.c_str(), reinterpret_cast<void*>(AGS2ClientStub_Initialize));
     engine->RegisterScriptFunction(findLeaderboard.c_str(), reinterpret_cast<void*>(LeaderboardsStub_FindLeaderboard));

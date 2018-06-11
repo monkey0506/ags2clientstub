@@ -1,6 +1,6 @@
 // AGS2ClientStub
 // Game-client plugin stub for AGS
-// Copyright © 2014-2017 MonkeyMoto Productions, Inc.
+// Copyright © 2014-2018 MonkeyMoto Productions, Inc.
 
 #ifndef AGS2CLIENT_AGS2CLIENTSTUB_H
 #define AGS2CLIENT_AGS2CLIENTSTUB_H
@@ -15,20 +15,17 @@ namespace AGS2Client
     {
         class AGS2ClientStub : public AGS2Client::IAGS2Client
         {
-		protected:
+		public:
 #ifndef AGS2CLIENT_HAS_CPP11 // NOT C++11
 			AGS2ClientStub() noexcept {}
 
-		public:
 			~AGS2ClientStub() noexcept {}
 #else // C++11
 			AGS2ClientStub() noexcept = default;
 
-		public:
 			~AGS2ClientStub() noexcept = default;
 #endif // C++11
 
-        public:
 			static AGS2ClientStub& GetAGS2ClientStub() noexcept;
             bool IsInitialized() const noexcept override;
             void ResetStatsAndAchievements() const noexcept override;

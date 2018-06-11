@@ -15,7 +15,7 @@ void LeaderboardsStub::RequestLeaderboard(char const*, AGS2Client::LeaderboardSc
 {
 }
 
-void LeaderboardsStub_FindLeaderboard(char const *leaderboardName)
+extern "C" void LeaderboardsStub_FindLeaderboard(char const *leaderboardName)
 {
     LeaderboardsStub::GetLeaderboardsStub().RequestLeaderboard(nullptr, AGS2Client::LeaderboardScore::AroundUser, 10);
 }

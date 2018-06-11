@@ -28,26 +28,27 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\AchievementsStub.h" />
+    <ClInclude Include="..\..\AGS2ClientStub.h" />
     <ClInclude Include="..\..\ags2client\AGSFloatFix.h" />
     <ClInclude Include="..\..\ags2client\agsplugin.h" />
     <ClInclude Include="..\..\ags2client\Cpp11Fix.h" />
+    <ClInclude Include="..\..\ags2client\DllExports.h" />
     <ClInclude Include="..\..\ags2client\IAGS2Client.h" />
     <ClInclude Include="..\..\ags2client\IClientAchievements.h" />
     <ClInclude Include="..\..\ags2client\IClientLeaderboards.h" />
     <ClInclude Include="..\..\ags2client\IClientStats.h" />
-    <ClInclude Include="..\..\AGS2ClientStub.h" />
     <ClInclude Include="..\..\LeaderboardsStub.h" />
     <ClInclude Include="..\..\StatsStub.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\AchievementsStub.cpp" />
     <ClCompile Include="..\..\AGS2Client.cpp" />
+    <ClCompile Include="..\..\AGS2ClientStub.cpp" />
     <ClCompile Include="..\..\ags2client\IAGS2Client.cpp" />
     <ClCompile Include="..\..\ags2client\IClientAchievements.cpp" />
     <ClCompile Include="..\..\ags2client\IClientLeaderboards.cpp" />
     <ClCompile Include="..\..\ags2client\IClientStats.cpp" />
     <ClCompile Include="..\..\ags2client\main.cpp" />
-    <ClCompile Include="..\..\AGS2ClientStub.cpp" />
     <ClCompile Include="..\..\LeaderboardsStub.cpp" />
     <ClCompile Include="..\..\StatsStub.cpp" />
   </ItemGroup>
@@ -147,7 +148,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;AGS2CLIENT_UNIFIED_CLIENT_NAME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;AGS2CLIENT_UNIFIED_CLIENT_NAME;WINDOWS_VERSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -165,7 +166,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-disjoint-agsgalaxy|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>AGS2CLIENTSTUB_PLUGIN_NAME="AGSGalaxy";WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>AGS2CLIENTSTUB_PLUGIN_NAME="AGSGalaxy";WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;WINDOWS_VERSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -183,7 +184,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-disjoint-agsteam|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>AGS2CLIENTSTUB_PLUGIN_NAME="AGSteam";WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>AGS2CLIENTSTUB_PLUGIN_NAME="AGSteam";WIN32;_DEBUG;_WINDOWS;_USRDLL;AGS2CLIENTSTUB_EXPORTS;WINDOWS_VERSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>

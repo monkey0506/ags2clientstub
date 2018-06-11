@@ -62,12 +62,12 @@ char const* AGS2ClientStub::GetAGSPluginName() const noexcept
 
 char const* AGS2ClientStub::GetAGSPluginDesc() const noexcept
 {
-    return "AGS2ClientStub: Game-client plugin stub for AGS (C) 2014-2017 MonkeyMoto Productions, Inc.";
+    return "AGS2ClientStub: Game-client plugin stub for AGS (C) 2014-2018 MonkeyMoto Productions, Inc.";
 }
 
 float AGS2ClientStub::GetVersion() const noexcept
 {
-    return 3.0f;
+    return 3.1f;
 }
 
 bool AGS2ClientStub::ClaimKeyPress(int data, int (*IsKeyPressed)(int)) const noexcept
@@ -75,12 +75,12 @@ bool AGS2ClientStub::ClaimKeyPress(int data, int (*IsKeyPressed)(int)) const noe
 	return false;
 }
 
-int AGS2ClientStub_Initialize(char const*, char const*) // to match AGSGalaxy::Initialize(char const*, char const*)
+extern "C" int AGS2ClientStub_Initialize(char const*, char const*) // to match AGSGalaxy::Initialize(char const*, char const*)
 {
     return 0;
 }
 
-extern void LeaderboardsStub_FindLeaderboard(char const *leaderboardName);
+extern "C" void LeaderboardsStub_FindLeaderboard(char const *leaderboardName);
 
 void AGS2ClientStub::RegisterScriptFunctions(IAGSEngine *engine) const noexcept
 {

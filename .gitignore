@@ -1,5 +1,4 @@
-Solutions/build
-Solutions/Backup
+build
 *.depend
 *.layout
 *.ncb
@@ -8,4 +7,4 @@ Solutions/Backup
 *.vc*proj.user
 *.vc*proj.*.user
 *.opensdf
-Solutions/VS2017/.vs
+VS2017/.vs

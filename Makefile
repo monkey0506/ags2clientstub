@@ -2,7 +2,7 @@
 #
 # define some paths...
 PATH_SRC=.
-PATH_BUILD=$(PATH_SRC)/Solutions/build
+PATH_BUILD=$(PATH_SRC)/build
 SRCS=ags2client/IAGS2Client.cpp ags2client/IClientAchievements.cpp ags2client/IClientLeaderboards.cpp \
 	ags2client/IClientStats.cpp ags2client/main.cpp AchievementsStub.cpp AGS2Client.cpp AGS2ClientStub.cpp \
 	LeaderboardsStub.cpp StatsStub.cpp
@@ -12,19 +12,19 @@ CXXFLAGS=-g -Wall -std=c++11 -O2 -fPIC
 
 # define some functions to help build other needed paths
 
-# get path to the ignored "build" folder's platform subdirectory (e.g., ./Solutions/build/osx)
+# get path to the ignored "build" folder's platform subdirectory (e.g., ./build/osx)
 # requires 1 arg, platform to build (e.g., osx)
 define platform_build_path
 $(PATH_BUILD)/$1
 endef
 
-# get path to platform-specific object folder (e.g., ./Solutions/build/osx/obj)
+# get path to platform-specific object folder (e.g., ./build/osx/obj)
 # requires 1 arg, specifies platform (e.g., osx)
 define platform_obj_path
 $(call platform_build_path,$1)/obj
 endef
 
-# get object file path names (e.g., ./Solutions/build/osx/obj/ags2client/IAGS2Client.o) for all object files
+# get object file path names (e.g., ./build/osx/obj/ags2client/IAGS2Client.o) for all object files
 # requires 1 arg, specifies platform (e.g., osx)
 define obj_file_paths
 $(patsubst %,$(call platform_obj_path,$1)/%,$(OBJS))
